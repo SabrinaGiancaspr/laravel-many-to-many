@@ -20,6 +20,11 @@
                   {{$project->type->name}}
                 </p>
               @endif
+              <ul class="d-flex gap-2">
+                @foreach ($project->technologies as $technology)
+                  <li class="badge rounded-pill text-bg-primary">{{$technology->name}}</li>                    
+                @endforeach
+              </ul>
               <p><strong>GitHub Link:</strong></p>
               <a href="#" class="card-link">{{$project->link}}</a>
               
